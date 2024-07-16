@@ -1,11 +1,26 @@
+## Package Manager `pnpm`
+
+Enable `pnpm` using Node.js's `corepack`:
+
+```sh
+corepack enable
+```
+
+```sh
+corepack prepare pnpm@latest --activate
+```
+
+## Install packages
+
+```sh
+pnpm install --no-frozen-lockfile
+```
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Json server
-
-
 
 ## Code scaffolding
 
