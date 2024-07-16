@@ -1,6 +1,6 @@
 import { HttpClientModule } from '@angular/common/http';
 import { LOCALE_ID, NgModule } from '@angular/core';
-import { BrowserModule, REMOVE_STYLES_ON_COMPONENT_DESTROY } from '@angular/platform-browser';
+import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from 'app/app-routing.module';
 import { AppComponent } from 'app/app.component';
@@ -18,8 +18,7 @@ import { SharedModule } from 'app/shared/shared.module';
     BaseModule
   ],
   providers: [
-    { provide: LOCALE_ID, useValue: 'en' },
-    { provide: REMOVE_STYLES_ON_COMPONENT_DESTROY, useValue: true }
+    { provide: LOCALE_ID, useValue: 'en' }
   ],
   bootstrap: [AppComponent]
 })
