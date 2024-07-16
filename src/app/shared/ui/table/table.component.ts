@@ -1,12 +1,11 @@
 import { formatDate } from '@angular/common';
 import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges, ViewChild } from '@angular/core';
-import { isArray } from '@dwtechs/checkhard';
-import { CrudItemOptions } from 'app/shared/utils/crud-item-options/crud-item-options.model';
 import { TableLazyLoadEvent } from 'app/shared/ui/table/table-lazyload-event.model';
+import { ControlType } from 'app/shared/utils/crud-item-options/control-type.model';
+import { CrudItemOptions } from 'app/shared/utils/crud-item-options/crud-item-options.model';
 import { LazyLoadEvent, SelectItem } from 'primeng/api';
 import { Table } from 'primeng/table';
 import { TableColumn } from './table-column.model';
-import { ControlType } from 'app/shared/utils/crud-item-options/control-type.model';
 
 @Component({
   selector: 'app-table',
@@ -96,7 +95,7 @@ export class TableComponent<T> implements OnChanges {
     this.editedEntry = null;
     this.entryEditionDialogDisplayed = false;
   }
-  
+
   public onDeleteEntry(id: number): void{
     this.deleted.emit([id])
     this.entryEditionDialogDisplayed = false;
@@ -140,7 +139,7 @@ export class TableComponent<T> implements OnChanges {
       case ControlType.TABLE: {
         return this.tableCellRenderer(cellValue);
       }
-      case ControlType.SELECT: {        
+      case ControlType.SELECT: {
         return this.selectCellRenderer(cellValue, control);
       }
       case ControlType.MULTISELECT: {
@@ -161,7 +160,7 @@ export class TableComponent<T> implements OnChanges {
   private tableCellRenderer(cellValue: unknown): string {
     return this.isCellArray(cellValue) ? cellValue.length.toString() : '';
   }
-  
+
   private selectCellRenderer(cellValue: unknown, column: CrudItemOptions): string {
     const option = this.getOption(column, cellValue);
     if (!option) return '';
@@ -190,7 +189,7 @@ export class TableComponent<T> implements OnChanges {
   }
 
   private isCellArray(cellValue: unknown): cellValue is unknown[] {
-    return cellValue && isArray(cellValue);
+    return cellValue && Array.isArray(cellValue);
   }
 
   private getOption(column: CrudItemOptions, cellValue: unknown): SelectItem {
