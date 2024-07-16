@@ -51,8 +51,8 @@ importers:
         specifier: 6.0.1
         version: 6.0.1
       primeng:
-        specifier: 14.2.1
-        version: 14.2.1(@angular/common@15.2.10(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4))(rxjs@7.5.7))(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4))(@angular/forms@15.2.10(@angular/common@15.2.10(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4))(rxjs@7.5.7))(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4))(@angular/platform-browser@15.2.10(@angular/animations@15.2.10(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4)))(@angular/common@15.2.10(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4))(rxjs@7.5.7))(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4)))(rxjs@7.5.7))(primeicons@6.0.1)(rxjs@7.5.7)(zone.js@0.11.4)
+        specifier: 15.4.22-lts
+        version: 15.4.22-lts(@angular/common@15.2.10(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4))(rxjs@7.5.7))(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4))(@angular/forms@15.2.10(@angular/common@15.2.10(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4))(rxjs@7.5.7))(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4))(@angular/platform-browser@15.2.10(@angular/animations@15.2.10(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4)))(@angular/common@15.2.10(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4))(rxjs@7.5.7))(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4)))(rxjs@7.5.7))(rxjs@7.5.7)(zone.js@0.11.4)
       rxjs:
         specifier: 7.5.7
         version: 7.5.7
@@ -3275,15 +3275,14 @@ packages:
   primeicons@6.0.1:
     resolution: {integrity: sha512-KDeO94CbWI4pKsPnYpA1FPjo79EsY9I+M8ywoPBSf9XMXoe/0crjbUK7jcQEDHuc0ZMRIZsxH3TYLv4TUtHmAA==}
 
-  primeng@14.2.1:
-    resolution: {integrity: sha512-T+0vWgEIzeubKQFOrKSHozlHgt7Mv0vp14X0PHNRkF1Xhu9Sj+umwNRPUn7swenJewS0Le7QELT7cgesLjUV6Q==}
+  primeng@15.4.22-lts:
+    resolution: {integrity: sha512-n384c6YfSTT62hy9KqLEnht3cEWxTtyEomYrlBsP8CSMct0Aoe6+Ippx1aLbpfn+12aQw6B655hV8hEK9HxWbQ==}
     peerDependencies:
-      '@angular/common': ^14.0.0
-      '@angular/core': ^14.0.0
-      '@angular/forms': ^14.0.0
-      primeicons: ^6.0.1
-      rxjs: ^6.0.0 || ^7.0.0
-      zone.js: ^0.10.2 || ^0.11.0
+      '@angular/common': ^15.2.1
+      '@angular/core': ^15.2.1
+      '@angular/forms': ^15.2.1
+      rxjs: ^6.0.0 || ^7.5.0
+      zone.js: ^0.10.2 || ^0.11.0 || ^0.12.0 || ^0.13.0
 
   proc-log@3.0.0:
     resolution: {integrity: sha512-++Vn7NS4Xf9NacaU9Xq3URUuqZETPsf8L4j5/ckhaRYsfPeRyzGw+iDjFhV/Jr3uNmTvvddEJFWh5R1gRgUH8A==}
@@ -8034,12 +8033,11 @@ snapshots:
 
   primeicons@6.0.1: {}
 
-  primeng@14.2.1(@angular/common@15.2.10(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4))(rxjs@7.5.7))(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4))(@angular/forms@15.2.10(@angular/common@15.2.10(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4))(rxjs@7.5.7))(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4))(@angular/platform-browser@15.2.10(@angular/animations@15.2.10(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4)))(@angular/common@15.2.10(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4))(rxjs@7.5.7))(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4)))(rxjs@7.5.7))(primeicons@6.0.1)(rxjs@7.5.7)(zone.js@0.11.4):
+  primeng@15.4.22-lts(@angular/common@15.2.10(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4))(rxjs@7.5.7))(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4))(@angular/forms@15.2.10(@angular/common@15.2.10(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4))(rxjs@7.5.7))(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4))(@angular/platform-browser@15.2.10(@angular/animations@15.2.10(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4)))(@angular/common@15.2.10(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4))(rxjs@7.5.7))(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4)))(rxjs@7.5.7))(rxjs@7.5.7)(zone.js@0.11.4):
     dependencies:
       '@angular/common': 15.2.10(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4))(rxjs@7.5.7)
       '@angular/core': 15.2.10(rxjs@7.5.7)(zone.js@0.11.4)
       '@angular/forms': 15.2.10(@angular/common@15.2.10(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4))(rxjs@7.5.7))(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4))(@angular/platform-browser@15.2.10(@angular/animations@15.2.10(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4)))(@angular/common@15.2.10(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4))(rxjs@7.5.7))(@angular/core@15.2.10(rxjs@7.5.7)(zone.js@0.11.4)))(rxjs@7.5.7)
-      primeicons: 6.0.1
       rxjs: 7.5.7
       tslib: 2.6.3
       zone.js: 0.11.4
