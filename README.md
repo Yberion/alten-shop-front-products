@@ -30,11 +30,15 @@ Run `ng generate component component-name` to generate a new component. You can 
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
-## serve a Build
+## serve
 
-$ npm i -g serve
-$ cd dist/product-trial
-\$ serve
+Using Angular Dev server:
+
+`pnpm run start`
+
+Using `serve` to use the built application (require to build the app first):
+
+`pnpm run serve`
 
 ## Running unit tests
 
