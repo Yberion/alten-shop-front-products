@@ -1,6 +1,4 @@
-import { registerLocaleData } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
-import localeEn from '@angular/common/locales/en';
 import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -24,8 +22,4 @@ import { SharedModule } from 'app/shared/shared.module';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule {
-  constructor() {
-    registerLocaleData(localeEn, 'en');
-  }
-}
+export class AppModule {}
