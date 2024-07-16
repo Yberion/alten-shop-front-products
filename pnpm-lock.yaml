@@ -66,15 +66,6 @@ importers:
       '@angular/language-service':
         specifier: 16.2.12
         version: 16.2.12
-      '@types/chart.js':
-        specifier: 2.9.30
-        version: 2.9.30
-      '@types/jasmine':
-        specifier: 3.6.0
-        version: 3.6.0
-      '@types/jasminewd2':
-        specifier: 2.0.8
-        version: 2.0.8
       '@types/node':
         specifier: 20.14.10
         version: 20.14.10
@@ -1151,9 +1142,6 @@ packages:
   '@types/bonjour@3.5.13':
     resolution: {integrity: sha512-z9fJ5Im06zvUL548KvYNecEVlA7cVDkGUi6kZusb04mpyEFKCIZJvloCcmpmLaIahDpOQGHaHmG6imtPMmPXGQ==}
 
-  '@types/chart.js@2.9.30':
-    resolution: {integrity: sha512-EgjxUUZFvf6ls3kW2CwyrnSJhgyKxgwrlp/W5G9wqyPEO9iFatO63zAA7L24YqgMxiDjQ+tG7ODU+2yWH91lPg==}
-
   '@types/component-emitter@1.2.14':
     resolution: {integrity: sha512-lmPil1g82wwWg/qHSxMWkSKyJGQOK+ejXeMAAWyxNtVUD0/Ycj2maL63RAqpxVfdtvTfZkRnqzB0A9ft59y69g==}
 
@@ -1189,12 +1177,6 @@ packages:
 
   '@types/http-proxy@1.17.14':
     resolution: {integrity: sha512-SSrD0c1OQzlFX7pGu1eXxSEjemej64aaNPRhhVYUGqXh0BtldAAx37MG8btcumvpgKyZp1F5Gn3JkktdxiFv6w==}
-
-  '@types/jasmine@3.6.0':
-    resolution: {integrity: sha512-CPT4r0a63e5wpNj5ejMnconM7a+0Hdx6/APsyw8AQOHk0/Mxp3xYrym1ZabWJiYuQkgKB3MonYoN04mxtvAvRA==}
-
-  '@types/jasminewd2@2.0.8':
-    resolution: {integrity: sha512-d9p31r7Nxk0ZH0U39PTH0hiDlJ+qNVGjlt1ucOoTUptxb2v+Y5VMnsxfwN+i3hK4yQnqBi3FMmoMFcd1JHDxdg==}
 
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
@@ -3058,9 +3040,6 @@ packages:
     resolution: {integrity: sha512-vVqVZQyf3WLx2Shd0qJ9xuvqgAyKPLAiqITEtqW0oIUjzo3PePDd6fW9iFz30ef7Ysp/oiWqbhszeGWW2T6Gzw==}
     engines: {node: '>=10'}
     hasBin: true
-
-  moment@2.30.1:
-    resolution: {integrity: sha512-uEmtNhbDOrWPFS+hdjFCBfy9f2YoyzRpwcl+DqpC6taX21FzsTLQVbMV/W7PzNSX6x/bhC1zA3c2UQ5NzH6how==}
 
   mrmime@1.0.1:
     resolution: {integrity: sha512-hzzEagAgDyoU1Q6yg5uI+AorQgdvMCur3FcKf7NhMKWsaYg+RnbTyHRa/9IlLF9rf455MOCtcqqrQQ83pPP7Uw==}
@@ -5835,10 +5814,6 @@ snapshots:
     dependencies:
       '@types/node': 20.14.10
 
-  '@types/chart.js@2.9.30':
-    dependencies:
-      moment: 2.30.1
-
   '@types/component-emitter@1.2.14':
     optional: true
 
@@ -5890,12 +5865,6 @@ snapshots:
   '@types/http-proxy@1.17.14':
     dependencies:
       '@types/node': 20.14.10
-
-  '@types/jasmine@3.6.0': {}
-
-  '@types/jasminewd2@2.0.8':
-    dependencies:
-      '@types/jasmine': 3.6.0
 
   '@types/json-schema@7.0.15': {}
 
@@ -8060,8 +8029,6 @@ snapshots:
       minimist: 1.2.8
 
   mkdirp@1.0.4: {}
-
-  moment@2.30.1: {}
 
   mrmime@1.0.1: {}
 

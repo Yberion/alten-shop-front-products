@@ -37,9 +37,6 @@
   },
   "devDependencies": {
     "@angular/language-service": "16.2.12",
-    "@types/chart.js": "2.9.30",
-    "@types/jasmine": "3.6.0",
-    "@types/jasminewd2": "2.0.8",
     "@types/node": "20.14.10",
     "codelyzer": "6.0.0",
     "serve": "14.2.3",
