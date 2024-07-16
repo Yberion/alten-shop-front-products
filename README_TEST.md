@@ -15,7 +15,7 @@ Le design cible est visible sur les captures d'écrans ci-dessous (et disponible
 **Pour la partie Admin :**
 ![admin](doc/products-admin.png)
 
-Nous vous conseillons d'utiliser le composant table de [PrimeNG](https://primeng.org/table/filter) avec les options filtre, edit, page, etc...
+Nous vous conseillons d'utiliser le composant table de [PrimeNG](https://primeng.org/table#filter) avec les options filtre, edit, page, etc...
 
  **Pour la partie publique :**
 ![public](doc/products.png)
