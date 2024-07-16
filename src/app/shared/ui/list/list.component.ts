@@ -2,7 +2,8 @@ import { Component, EventEmitter, Input, OnInit, Output, TemplateRef, ViewChild 
 import { FormControl } from '@angular/forms';
 import { DEFAULT_SEARCH_PARAMS, SearchParams, Sort } from 'app/shared/ui/list/search.model';
 import { PrimeNGConfig, SelectItem } from 'primeng/api';
-import { DataView } from 'primeng/dataview';
+import { CheckboxChangeEvent } from 'primeng/checkbox';
+import { DataView, DataViewLazyLoadEvent } from 'primeng/dataview';
 import { debounceTime } from 'rxjs/operators';
 import { ListService } from './list.service';
 
@@ -45,7 +46,7 @@ export class ListComponent<T> implements OnInit {
   // Search performed by backend
   @Input() public readonly backEndSearch: boolean;
 
-  @Output() pageChanged: EventEmitter<PaginationEvent> = new EventEmitter();
+  @Output() pageChanged: EventEmitter<DataViewLazyLoadEvent> = new EventEmitter();
   @Output() filtered: EventEmitter<SearchParams> = new EventEmitter();
   @Output() addClicked: EventEmitter<void> = new EventEmitter();
   @Output() deleteClicked: EventEmitter<T[]> = new EventEmitter();
@@ -114,8 +115,8 @@ export class ListComponent<T> implements OnInit {
     this.dateRangeCtrl.setValue([from, to], { emitEvent: false });
   }
 
-  public selectItem({ checked }, item: T&{id}) {
-    if (checked) {
+  public selectItem(event: CheckboxChangeEvent, item: T & {id}) {
+    if (event.checked) {
       this.selection.push(item);
     } else {
       this.selection = this.selection.filter(s => s.id !== item.id);
@@ -130,7 +131,7 @@ export class ListComponent<T> implements OnInit {
     this.deleteClicked.emit(this.selection);
   }
 
-  public onPageChange(event: PaginationEvent) {
+  public onPageChange(event: DataViewLazyLoadEvent) {
     if (!this.firstLoad) {
       this.storeSearchParams({ first: event.first, rows: event.rows });
       this.pageChanged.emit(event);

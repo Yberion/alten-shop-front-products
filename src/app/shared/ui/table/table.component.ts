@@ -1,10 +1,10 @@
 import { formatDate } from '@angular/common';
 import { Component, EventEmitter, Input, OnChanges, Output, SimpleChanges, ViewChild } from '@angular/core';
-import { TableLazyLoadEvent } from 'app/shared/ui/table/table-lazyload-event.model';
+
 import { ControlType } from 'app/shared/utils/crud-item-options/control-type.model';
 import { CrudItemOptions } from 'app/shared/utils/crud-item-options/crud-item-options.model';
-import { LazyLoadEvent, SelectItem } from 'primeng/api';
-import { Table } from 'primeng/table';
+import { SelectItem } from 'primeng/api';
+import { Table, TableLazyLoadEvent } from 'primeng/table';
 import { TableColumn } from './table-column.model';
 
 @Component({
@@ -53,7 +53,7 @@ export class TableComponent<T> implements OnChanges {
     }
   }
 
-  public onLazyLoad(event: LazyLoadEvent) {
+  public onLazyLoad(event: TableLazyLoadEvent) {
     const cleanEvent: TableLazyLoadEvent = {
       first: event.first,
       rows: event.rows,

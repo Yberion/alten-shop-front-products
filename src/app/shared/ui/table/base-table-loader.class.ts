@@ -1,4 +1,5 @@
-import { TableLazyLoadEvent } from 'app/shared/ui/table/table-lazyload-event.model';
+
+import { TableLazyLoadEvent } from 'primeng/table';
 import { BehaviorSubject, Observable } from 'rxjs';
 
 export class BaseTableLoader {
