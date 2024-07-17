@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, HostBinding, inject } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MessageModule } from 'primeng/message';
 import { ToastModule } from 'primeng/toast';
@@ -14,9 +14,12 @@ import { SidenavService } from './core/services/sidenav/sidenav.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
+  host: {
+    '[class.transparent]': 'this.transparent',
+  },
 })
 export class AppComponent {
-  @HostBinding('class.transparent') transparent = false;
+  transparent = false;
 
   private readonly sidenavService: SidenavService = inject(SidenavService);
 
