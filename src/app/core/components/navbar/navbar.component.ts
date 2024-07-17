@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { ThemeToggleButtonComponent } from './components/theme-toggle-button/theme-toggle-button.component';
@@ -12,8 +12,6 @@ import { ThemeToggleButtonComponent } from './components/theme-toggle-button/the
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent {
-  @Input() isAuthenticated = false;
-
   public userMenuItems: MenuItem[] = [
     { label: 'Profile', icon: 'pi pi-fw pi-cog', routerLink: '/user/profile' },
     {

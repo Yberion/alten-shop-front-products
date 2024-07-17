@@ -2,8 +2,9 @@ import {
   ChangeDetectionStrategy,
   Component,
   DestroyRef,
-  Input,
-  OnInit,
+  input,
+  InputSignal,
+  OnInit
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { NavigationEnd, Router } from '@angular/router';
@@ -23,7 +24,7 @@ import { SidenavItem } from '../sidenav/models/sidenav-item.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BreadcrumbComponent implements OnInit {
-  @Input() public lang = 'en';
+  lang: InputSignal<string> = input<string>('en');
   public items: MenuItem[] = [];
   private readonly sidenavItems: SidenavItem[] = SIDENAV_ITEMS;
   private homeItem: MenuItem = { label: 'Home', routerLink: '/' };
@@ -54,7 +55,7 @@ export class BreadcrumbComponent implements OnInit {
     );
     if (firstPath) {
       this.items.push({
-        label: firstPath.labels[this.lang],
+        label: firstPath.labels[this.lang()],
         routerLink: firstPath.link,
         command: () => this.sidenavService.setCurrentEntityName(''),
       });
