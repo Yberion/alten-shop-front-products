@@ -1,7 +1,0 @@
-{
-  "singleQuote": true,
-  "printWidth": 140,
-  "embeddedLanguageFormatting": "off",
-  "plugins": ["prettier-plugin-organize-attributes"],
-  "attributeGroups": ["^mat", "$ANGULAR_STRUCTURAL_DIRECTIVE", "^data-testid"]
-}
