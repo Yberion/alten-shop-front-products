@@ -16,8 +16,15 @@ describe('AppComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [AppComponent, MockModule(MessageModule), MockModule(ToastModule), MockComponent(NavbarComponent), MockComponent(SidenavComponent), MockComponent(BreadcrumbComponent)],
-      providers: [provideRouter([]), MockProvider(SidenavService)]
+      imports: [
+        AppComponent,
+        MockModule(MessageModule),
+        MockModule(ToastModule),
+        MockComponent(NavbarComponent),
+        MockComponent(SidenavComponent),
+        MockComponent(BreadcrumbComponent),
+      ],
+      providers: [provideRouter([]), MockProvider(SidenavService)],
     }).compileComponents();
 
     fixture = TestBed.createComponent(AppComponent);

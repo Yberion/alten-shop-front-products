@@ -1,13 +1,5 @@
 import { NgOptimizedImage } from '@angular/common';
-import {
-  ChangeDetectionStrategy,
-  Component,
-  inject,
-  input,
-  InputSignal,
-  output,
-  OutputEmitterRef
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, input, InputSignal, output, OutputEmitterRef } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { SidenavService } from '../../services/sidenav/sidenav.service';
 import { SIDENAV_ITEMS } from './data/sidenav-items.data';
@@ -25,9 +17,7 @@ export class SidenavComponent {
   lang: InputSignal<string> = input<string>('en');
   hovered: OutputEmitterRef<boolean> = output<boolean>();
 
-  public sidenavItems: SidenavItem[] = SIDENAV_ITEMS.filter(
-    (item) => !item.hidden,
-  );
+  public sidenavItems: SidenavItem[] = SIDENAV_ITEMS.filter((item) => !item.hidden);
 
   public Object = Object;
 
@@ -40,10 +30,7 @@ export class SidenavComponent {
 
   public onSidenavItemClick(item: SidenavItem, event: Event): void {
     event.preventDefault();
-    if (
-      this.sidenavService.getMobileDisplay() &&
-      !this.sidenavService.getExpanded()
-    ) {
+    if (this.sidenavService.getMobileDisplay() && !this.sidenavService.getExpanded()) {
       this.sidenavService.setExpanded(true);
     } else {
       this.navigate(item);

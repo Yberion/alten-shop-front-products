@@ -1,12 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  DestroyRef,
-  inject,
-  input,
-  InputSignal,
-  OnInit
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, inject, input, InputSignal, OnInit } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Event, EventType, NavigationEnd, Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
@@ -49,9 +41,7 @@ export class BreadcrumbComponent implements OnInit {
   }
 
   private buildBreadcrumb(path: string): void {
-    const firstPath: SidenavItem | undefined = this.sidenavItems.find(
-      (item) => '/' + item.id === path,
-    );
+    const firstPath: SidenavItem | undefined = this.sidenavItems.find((item) => '/' + item.id === path);
     if (firstPath) {
       this.items.push({
         label: firstPath.labels[this.lang()],

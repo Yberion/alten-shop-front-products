@@ -1,9 +1,5 @@
 <app-navbar></app-navbar>
-<div
-  class="app-container"
-  [class.sidenav-expanded]="getExpanded"
-  [class.sidenav-pinned]="getPinned"
->
+<div class="app-container" [class.sidenav-expanded]="getExpanded" [class.sidenav-pinned]="getPinned">
   <app-sidenav></app-sidenav>
   <div class="app-header">
     <app-breadcrumb></app-breadcrumb>

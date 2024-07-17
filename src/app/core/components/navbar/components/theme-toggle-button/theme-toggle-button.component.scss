@@ -22,7 +22,7 @@
       left: 2px;
       transition: all 0.3s;
     }
-  
+
     .checkbox:checked + .switch::after {
       left: 20px;
       background-color: var(--primary-bg-color-light);
@@ -34,5 +34,5 @@
     .checkbox {
       display: none;
     }
-  }  
+  }
 }

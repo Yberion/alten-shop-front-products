@@ -7,11 +7,11 @@
     top: 0;
     width: 60px;
     transition: all 0.3s;
-  
+
     [data-expanded-only] {
       display: none;
     }
-  
+
     .pinned-icon {
       position: absolute;
       z-index: 4;
@@ -19,12 +19,12 @@
       right: 10px;
       cursor: pointer;
       color: white;
-  
+
       &.active {
         color: var(--primary-color);
       }
     }
-  
+
     .title-container {
       cursor: pointer;
       color: var(--text-nav-color);
@@ -39,7 +39,7 @@
       overflow: hidden;
       display: flex;
       align-items: center;
-  
+
       span {
         &.first {
           font-size: 30px;
@@ -49,13 +49,13 @@
         }
       }
     }
-  
+
     ul {
       list-style: none;
       margin: 0;
       padding: 0;
       height: 100%;
-  
+
       li {
         padding-left: 0;
         padding-right: 0;
@@ -64,12 +64,12 @@
         color: var(--text-nav-color);
         cursor: pointer;
         position: relative;
-  
+
         &.router-link-active {
           background-color: var(--secondary-nav-color);
           border-right: 4px solid var(--primary-color);
         }
-  
+
         &.child-item-active {
           font-weight: bold;
           background-color: var(--primary-color);
@@ -79,23 +79,23 @@
           text-overflow: ellipsis;
           white-space: nowrap;
         }
-  
+
         &:hover:not(.router-link-active) {
           padding-left: 20px;
           color: #fff;
         }
-  
+
         .li-container {
           text-align: center;
           min-height: 30px;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
-  
+
           .menu-icon {
             font-size: 1.2rem;
           }
-  
+
           .chevron {
             position: absolute;
             right: 20px;
@@ -103,24 +103,24 @@
         }
       }
     }
-  
+
     &.expanded {
       width: 260px;
-  
+
       span.first {
         padding-left: 4px;
       }
-  
+
       [data-expanded-only] {
         display: inline-block;
       }
-  
+
       ul li {
         padding: 12px 30px 12px 18px;
-  
+
         .li-container {
           text-align: unset;
-  
+
           .menu-icon {
             margin-right: 12px;
             float: left;
@@ -129,5 +129,4 @@
       }
     }
   }
-  
 }

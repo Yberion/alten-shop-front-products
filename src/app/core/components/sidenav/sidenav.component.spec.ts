@@ -12,7 +12,7 @@ describe('SidenavComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [SidenavComponent],
-      providers: [provideRouter([]), MockProvider(SidenavService)]
+      providers: [provideRouter([]), MockProvider(SidenavService)],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SidenavComponent);

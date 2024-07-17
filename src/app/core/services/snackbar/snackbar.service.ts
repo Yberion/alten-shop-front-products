@@ -33,9 +33,7 @@ export class SnackbarService {
         messageConfig.severity = 'info';
       }
       if (!messageConfig.summary) {
-        messageConfig.summary = TitleCasePipe.prototype.transform(
-          messageConfig.severity,
-        );
+        messageConfig.summary = TitleCasePipe.prototype.transform(messageConfig.severity);
       }
     }
     this.messageService.add(messageConfig);

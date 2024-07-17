@@ -17,8 +17,7 @@ export class ThemeToggleButtonComponent implements OnInit {
   ngOnInit(): void {
     // Set theme
     const storedTheme = localStorage.getItem('DWTheme');
-    const theme: 'dark' | 'light' =
-      storedTheme !== 'dark' && storedTheme !== 'light' ? 'light' : storedTheme;
+    const theme: 'dark' | 'light' = storedTheme !== 'dark' && storedTheme !== 'light' ? 'light' : storedTheme;
     this.darkMode = theme === 'dark';
     this.setTheme(theme);
   }
@@ -30,8 +29,7 @@ export class ThemeToggleButtonComponent implements OnInit {
   }
 
   private setTheme(theme: 'dark' | 'light'): void {
-    const documentTheme =
-      document.documentElement.getAttribute('data-dark-mode');
+    const documentTheme = document.documentElement.getAttribute('data-dark-mode');
     if (documentTheme !== theme) {
       document.documentElement.setAttribute('data-dark-mode', theme);
       this.themeService.switchTheme(theme);

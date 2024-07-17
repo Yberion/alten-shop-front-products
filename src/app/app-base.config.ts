@@ -7,7 +7,7 @@ import { errorInterceptor } from './core/interceptors/error/error.interceptor';
 
 export const appBaseConfig: ApplicationConfig = {
   providers: [
-    provideRouter(appRoutes, withRouterConfig({ resolveNavigationPromiseOnError: true }),),
+    provideRouter(appRoutes, withRouterConfig({ resolveNavigationPromiseOnError: true })),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideHttpClient(withFetch(), withInterceptors([errorInterceptor])),
     { provide: LOCALE_ID, useValue: 'en' },

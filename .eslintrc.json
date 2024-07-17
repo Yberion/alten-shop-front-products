@@ -86,10 +86,7 @@
     },
     {
       "files": ["*.ts", "*.tsx", ".mts"],
-      "extends": [
-        "plugin:@nx/typescript",
-        "plugin:@typescript-eslint/stylistic"
-      ],
+      "extends": ["plugin:@nx/typescript", "plugin:@typescript-eslint/stylistic"],
       "rules": {
         "@typescript-eslint/explicit-function-return-type": "error",
         "@typescript-eslint/consistent-type-exports": "error",

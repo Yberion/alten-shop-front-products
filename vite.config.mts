@@ -13,7 +13,7 @@ export default defineConfig(({ mode }) => {
       angular({
         tsconfig: 'tsconfig.spec.json',
       }),
-      viteTsConfigPaths()
+      viteTsConfigPaths(),
     ],
 
     // Uncomment this if you are using workers.
@@ -39,5 +39,5 @@ export default defineConfig(({ mode }) => {
     define: {
       'import.meta.vitest': mode !== 'production',
     },
-  }
+  };
 });

@@ -1,12 +1,5 @@
-import type {
-  HttpHandlerFn,
-  HttpInterceptorFn,
-  HttpRequest
-} from '@angular/common/http';
-import {
-  HttpErrorResponse,
-  HttpResponse
-} from '@angular/common/http';
+import type { HttpHandlerFn, HttpInterceptorFn, HttpRequest } from '@angular/common/http';
+import { HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { inject } from '@angular/core';
 import type { Observable } from 'rxjs';
 import { catchError, of, throwError } from 'rxjs';
@@ -20,7 +13,7 @@ export const errorInterceptor: HttpInterceptorFn = (request: HttpRequest<unknown
       if (error instanceof HttpErrorResponse) {
         return returnError(error.status);
       }
-      
+
       snackbarService.displayError();
 
       return throwError(() => error);

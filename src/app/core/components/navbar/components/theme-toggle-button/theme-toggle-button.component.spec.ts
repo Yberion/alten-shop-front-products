@@ -11,7 +11,7 @@ describe('ThemeToggleButtonComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [ThemeToggleButtonComponent],
-      providers: [MockProvider(ThemeService)]
+      providers: [MockProvider(ThemeService)],
     }).compileComponents();
 
     fixture = TestBed.createComponent(ThemeToggleButtonComponent);
