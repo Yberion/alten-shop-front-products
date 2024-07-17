@@ -8,7 +8,7 @@ import {
   OnInit
 } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
-import { NavigationEnd, Router } from '@angular/router';
+import { Event, EventType, NavigationEnd, Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 import { BreadcrumbModule } from 'primeng/breadcrumb';
 import { filter, map, startWith, tap } from 'rxjs';
@@ -37,7 +37,7 @@ export class BreadcrumbComponent implements OnInit {
   ngOnInit(): void {
     this.router.events
       .pipe(
-        filter((event) => event instanceof NavigationEnd),
+        filter((event: Event): event is NavigationEnd => event.type === EventType.NavigationEnd),
         map((event: NavigationEnd) => event.url),
         startWith(this.router.url),
         tap(() => (this.items = [this.homeItem])),
