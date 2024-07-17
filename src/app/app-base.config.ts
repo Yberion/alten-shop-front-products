@@ -1,4 +1,4 @@
-import { provideHttpClient, withInterceptors } from '@angular/common/http';
+import { provideHttpClient, withFetch, withInterceptors } from '@angular/common/http';
 import { LOCALE_ID, provideZoneChangeDetection, type ApplicationConfig } from '@angular/core';
 import { provideRouter, withRouterConfig } from '@angular/router';
 import { MessageService } from 'primeng/api';
@@ -9,7 +9,7 @@ export const appBaseConfig: ApplicationConfig = {
   providers: [
     provideRouter(appRoutes, withRouterConfig({ resolveNavigationPromiseOnError: true }),),
     provideZoneChangeDetection({ eventCoalescing: true }),
-    provideHttpClient(withInterceptors([errorInterceptor])),
+    provideHttpClient(withFetch(), withInterceptors([errorInterceptor])),
     { provide: LOCALE_ID, useValue: 'en' },
     MessageService,
   ],
