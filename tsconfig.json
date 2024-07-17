@@ -25,7 +25,7 @@
     "noUnusedLocals": true,
     "isolatedModules": true,
     "baseUrl": ".",
-    "paths": {},
+    "paths": {}
   },
   "files": [],
   "include": [],
