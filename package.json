@@ -7,7 +7,7 @@
     "start": "nx serve",
     "build": "nx build",
     "serve": "serve .\\dist\\product-trial\\browser",
-    "test": "nx test",
+    "test": "nx run-many --target=test",
     "lint": "nx run-many --target=lint",
     "format": "nx format:write",
     "format2": "prettier --write .",
