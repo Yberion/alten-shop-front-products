@@ -1,14 +1,14 @@
 /* PrimeNG */
-@import 'primeicons/primeicons.css';
-@import 'primeng/resources/primeng.min.css';
+@use 'primeicons/primeicons.css';
+@use 'primeng/resources/primeng.min.css';
 
 /* Custom SCSS */
-@import 'styles/dropdown-panel.scss';
-@import 'styles/error-card';
-@import 'styles/dialog';
-@import 'styles/portrait';
-@import 'styles/table';
-@import 'styles/input-text';
+@use 'styles/dropdown-panel';
+@use 'styles/error-card';
+@use 'styles/dialog';
+@use 'styles/portrait';
+@use 'styles/table';
+@use 'styles/input-text';
 
 /* Fonts */
 @font-face {
