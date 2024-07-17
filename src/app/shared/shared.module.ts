@@ -12,11 +12,6 @@ import { PrimeNGModule } from './utils/primeng/primeng.module';
     FormsModule,
     PrimeNGModule,
   ],
-  exports: [
-    CommonModule,
-    ReactiveFormsModule,
-    FormsModule,
-    PrimeNGModule
-  ],
+  exports: [CommonModule, ReactiveFormsModule, FormsModule, PrimeNGModule],
 })
 export class SharedModule {}

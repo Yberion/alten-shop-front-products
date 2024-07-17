@@ -9,10 +9,10 @@ export class SidenavService {
   private _pinned = true;
   private _isMobileDisplay = false;
 
-  public currentEntityName$: BehaviorSubject<string> = new BehaviorSubject<string>('');
-  public currentChildEntityName$: BehaviorSubject<string> = new BehaviorSubject<string>(
-    '',
-  );
+  public currentEntityName$: BehaviorSubject<string> =
+    new BehaviorSubject<string>('');
+  public currentChildEntityName$: BehaviorSubject<string> =
+    new BehaviorSubject<string>('');
 
   constructor() {
     const screenWidth = window.innerWidth;

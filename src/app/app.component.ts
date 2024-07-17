@@ -5,7 +5,7 @@ import { SidenavService } from './base/sidenav/sidenav.service';
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppComponent {
   @HostBinding('class.transparent') transparent = false;

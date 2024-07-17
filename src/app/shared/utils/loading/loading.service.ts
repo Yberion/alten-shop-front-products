@@ -8,7 +8,9 @@ type Mode = 'indeterminate' | 'determinate' | 'spin';
 })
 export class LoadingService {
   private defaultMode: Mode = 'indeterminate';
-  public isLoading$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  public isLoading$: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(
+    false,
+  );
   public mode: Mode = this.defaultMode;
 
   public start(mode = this.defaultMode): void {

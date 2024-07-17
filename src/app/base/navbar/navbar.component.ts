@@ -5,7 +5,7 @@ import { MenuItem } from 'primeng/api';
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent {
   @Input() isAuthenticated = false;
