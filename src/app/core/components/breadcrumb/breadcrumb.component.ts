@@ -21,7 +21,7 @@ import { SidenavItem } from '../sidenav/models/sidenav-item.model';
   standalone: true,
   imports: [BreadcrumbModule],
   templateUrl: './breadcrumb.component.html',
-  styleUrls: ['./breadcrumb.component.scss'],
+  styleUrl: './breadcrumb.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BreadcrumbComponent implements OnInit {

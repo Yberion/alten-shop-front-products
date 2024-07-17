@@ -5,7 +5,7 @@ import { ThemeService } from './services/theme.service';
   selector: 'app-theme-toggle-button',
   standalone: true,
   templateUrl: './theme-toggle-button.component.html',
-  styleUrls: ['./theme-toggle-button.component.scss'],
+  styleUrl: './theme-toggle-button.component.scss',
   providers: [ThemeService],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

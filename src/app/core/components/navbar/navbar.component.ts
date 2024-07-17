@@ -8,7 +8,7 @@ import { ThemeToggleButtonComponent } from './components/theme-toggle-button/the
   standalone: true,
   imports: [ButtonModule, ThemeToggleButtonComponent],
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss'],
+  styleUrl: './navbar.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent {

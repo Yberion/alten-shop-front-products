@@ -12,7 +12,7 @@ import { SidenavService } from './core/services/sidenav/sidenav.service';
   standalone: true,
   imports: [MessageModule, ToastModule, NavbarComponent, SidenavComponent, BreadcrumbComponent, RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrl: './app.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
   host: {
     '[class.transparent]': 'this.transparent',

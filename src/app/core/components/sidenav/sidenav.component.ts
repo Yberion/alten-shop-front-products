@@ -18,7 +18,7 @@ import { SidenavItem } from './models/sidenav-item.model';
   standalone: true,
   imports: [RouterLink, RouterLinkActive, NgOptimizedImage],
   templateUrl: './sidenav.component.html',
-  styleUrls: ['./sidenav.component.scss'],
+  styleUrl: './sidenav.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SidenavComponent {
