@@ -9,8 +9,7 @@
     "serve": "serve .\\dist\\product-trial\\browser",
     "test": "nx run-many --target=test",
     "lint": "nx run-many --target=lint",
-    "format": "nx format:write",
-    "format2": "prettier --write .",
+    "format": "prettier --write .",
     "graph": "nx graph",
     "preinstall": "npx only-allow pnpm",
     "nx:repair": "nx repair"
