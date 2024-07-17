@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
-import { SidenavService } from './base/sidenav/sidenav.service';
+import { SidenavService } from './core/components/sidenav/sidenav.service';
+
 
 @Component({
   selector: 'app-root',
