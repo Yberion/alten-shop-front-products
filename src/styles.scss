@@ -192,21 +192,22 @@ body {
 }
 
 app-navbar {
-  display: block;
+  display: flex;
+  flex-direction: column;
   height: 60px;
-  position: fixed;
   width: 100%;
-  z-index: 3;
   background-color: var(--primary-bg-color);
 }
 
 .app-container {
-  padding-top: 59px;
+  display: flex;
+  flex-direction: column;
 
   &.sidenav-expanded {
     &.sidenav-pinned {
       .app-frame,
-      .app-header {
+      .app-header,
+      main {
         margin-left: 260px;
       }
     }
