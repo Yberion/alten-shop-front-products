@@ -1,6 +1,7 @@
 import { ChangeDetectionStrategy, Component, DestroyRef, inject, input, InputSignal, OnInit } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Event, EventType, NavigationEnd, Router } from '@angular/router';
+import { TranslocoModule } from '@jsverse/transloco';
 import { MenuItem } from 'primeng/api';
 import { BreadcrumbModule } from 'primeng/breadcrumb';
 import { filter, map, startWith, tap } from 'rxjs';
@@ -11,7 +12,7 @@ import { SidenavItem } from '../sidenav/models/sidenav-item.model';
 @Component({
   selector: 'app-breadcrumb',
   standalone: true,
-  imports: [BreadcrumbModule],
+  imports: [BreadcrumbModule, TranslocoModule],
   templateUrl: './breadcrumb.component.html',
   styleUrl: './breadcrumb.component.scss',
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -20,7 +21,7 @@ export class BreadcrumbComponent implements OnInit {
   lang: InputSignal<string> = input<string>('en');
   public items: MenuItem[] = [];
   private readonly sidenavItems: SidenavItem[] = SIDENAV_ITEMS;
-  private homeItem: MenuItem = { label: 'Home', routerLink: '/' };
+  private homeItem: MenuItem = { label: 'core.breadcrumb.page.home', routerLink: '/' };
 
   private readonly sidenavService: SidenavService = inject(SidenavService);
   private readonly router: Router = inject(Router);

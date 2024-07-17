@@ -3,6 +3,7 @@ import { LOCALE_ID, provideZoneChangeDetection, type ApplicationConfig } from '@
 import { provideRouter, withRouterConfig } from '@angular/router';
 import { MessageService } from 'primeng/api';
 import { appRoutes } from './app.routes';
+import { provideTranslocoSetup } from './core/features/transloco/providers/transloco.provider';
 import { errorInterceptor } from './core/interceptors/error/error.interceptor';
 
 export const appBaseConfig: ApplicationConfig = {
@@ -10,6 +11,7 @@ export const appBaseConfig: ApplicationConfig = {
     provideRouter(appRoutes, withRouterConfig({ resolveNavigationPromiseOnError: true })),
     provideZoneChangeDetection({ eventCoalescing: true }),
     provideHttpClient(withFetch(), withInterceptors([errorInterceptor])),
+    provideTranslocoSetup(),
     { provide: LOCALE_ID, useValue: 'en' },
     MessageService,
   ],

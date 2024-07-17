@@ -3,6 +3,7 @@ import { TestBed } from '@angular/core/testing';
 import { provideRouter } from '@angular/router';
 import { MockModule, MockProvider } from 'ng-mocks';
 import { BreadcrumbModule } from 'primeng/breadcrumb';
+import { getTranslocoTestingModule } from '../../features/transloco/utils/transloco-testing.utils';
 import { SidenavService } from '../../services/sidenav/sidenav.service';
 import { BreadcrumbComponent } from './breadcrumb.component';
 
@@ -12,7 +13,7 @@ describe('BreadcrumbComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [BreadcrumbComponent, MockModule(BreadcrumbModule)],
+      imports: [BreadcrumbComponent, MockModule(BreadcrumbModule), getTranslocoTestingModule({ en: {} })],
       providers: [provideRouter([]), MockProvider(SidenavService)],
     }).compileComponents();
 
