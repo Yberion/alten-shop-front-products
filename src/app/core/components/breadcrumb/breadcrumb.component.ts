@@ -21,7 +21,7 @@ export class BreadcrumbComponent implements OnInit {
   lang: InputSignal<string> = input<string>('en');
   public items: MenuItem[] = [];
   private readonly sidenavItems: SidenavItem[] = SIDENAV_ITEMS;
-  private homeItem: MenuItem = { label: 'core.breadcrumb.page.home', routerLink: '/' };
+  private homeItem: MenuItem = { label: 'core.breadcrumb.pages.home', routerLink: '/' };
 
   private readonly sidenavService: SidenavService = inject(SidenavService);
   private readonly router: Router = inject(Router);

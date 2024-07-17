@@ -1,12 +1,16 @@
 {
   "core": {
     "breadcrumb": {
-      "page": {
+      "pages": {
         "home": "Home"
       }
     },
     "sidenav": {
-      "title": "Alten Shop"
+      "title": "Alten Shop",
+      "items": {
+        "products": "Products",
+        "admin": "Admin"
+      }
     }
   }
 }
