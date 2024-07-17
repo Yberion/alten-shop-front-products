@@ -1,35 +1,33 @@
+import type {
+  HttpHandlerFn,
+  HttpInterceptorFn,
+  HttpRequest
+} from '@angular/common/http';
 import {
   HttpErrorResponse,
-  HttpEvent,
-  HttpHandler,
-  HttpInterceptor,
-  HttpRequest,
-  HttpResponse,
+  HttpResponse
 } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { catchError, EMPTY, Observable, of } from 'rxjs';
+import { inject } from '@angular/core';
+import type { Observable } from 'rxjs';
+import { catchError, of, throwError } from 'rxjs';
 import { SnackbarService } from '../../services/snackbar/snackbar.service';
 
-@Injectable()
-export class ErrorInterceptor implements HttpInterceptor {
-  constructor(private readonly snackbarService: SnackbarService) {}
+export const errorInterceptor: HttpInterceptorFn = (request: HttpRequest<unknown>, next: HttpHandlerFn) => {
+  const snackbarService: SnackbarService = inject(SnackbarService);
 
-  intercept(
-    req: HttpRequest<any>,
-    next: HttpHandler,
-  ): Observable<HttpEvent<any>> {
-    return next.handle(req).pipe(
-      catchError((err) => {
-        if (err instanceof HttpErrorResponse) {
-          return this.returnError(err.status);
-        }
-        this.snackbarService.displayError();
-        return EMPTY;
-      }),
-    );
-  }
+  return next(request).pipe(
+    catchError((error: unknown) => {
+      if (error instanceof HttpErrorResponse) {
+        return returnError(error.status);
+      }
+      
+      snackbarService.displayError();
 
-  private returnError(status: number): Observable<HttpResponse<unknown>> {
-    return of(new HttpResponse({ status, body: null }));
-  }
+      return throwError(() => error);
+    }),
+  );
+};
+
+function returnError(status: number): Observable<HttpResponse<unknown>> {
+  return of(new HttpResponse({ status, body: null }));
 }
