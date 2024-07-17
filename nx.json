@@ -34,6 +34,20 @@
       "linter": "eslint",
       "style": "scss",
       "unitTestRunner": "none"
+    },
+    "@nx/angular:library": {
+      "linter": "eslint",
+      "unitTestRunner": "none",
+      "style": "scss",
+      "changeDetection": "OnPush",
+      "prefix": "app",
+      "setParserOptionsProject": true,
+      "flat": true
+    },
+    "@nx/angular:component": {
+      "style": "scss",
+      "changeDetection": "OnPush",
+      "prefix": "app"
     }
   },
   "defaultProject": "product-trial"
