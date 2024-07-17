@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
-import { SidenavService } from './core/components/sidenav/sidenav.service';
+import { SidenavService } from './core/services/sidenav.service';
 
 
 @Component({

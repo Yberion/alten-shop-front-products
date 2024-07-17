@@ -9,9 +9,9 @@ import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { NavigationEnd, Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 import { filter, map, startWith, tap } from 'rxjs';
-import { SidenavItem } from '../sidenav/sidenav.model';
-import { SidenavService } from '../sidenav/sidenav.service';
-import { SIDENAV_ITEMS } from '../sidenav/SIDENAV_ITEMS';
+import { SidenavService } from '../../services/sidenav.service';
+import { SIDENAV_ITEMS } from '../sidenav/data/sidenav-items.data';
+import { SidenavItem } from '../sidenav/models/sidenav-item.model';
 
 @Component({
   selector: 'app-breadcrumb',

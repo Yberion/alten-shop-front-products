@@ -6,9 +6,9 @@ import {
   Output,
 } from '@angular/core';
 import { Router } from '@angular/router';
-import { SidenavItem } from './sidenav.model';
-import { SidenavService } from './sidenav.service';
-import { SIDENAV_ITEMS } from './SIDENAV_ITEMS';
+import { SidenavService } from '../../services/sidenav.service';
+import { SIDENAV_ITEMS } from './data/sidenav-items.data';
+import { SidenavItem } from './models/sidenav-item.model';
 
 @Component({
   selector: 'app-sidenav',
