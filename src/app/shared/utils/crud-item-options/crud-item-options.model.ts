@@ -1,7 +1,7 @@
-import { SelectItem } from 'primeng/api';
-import { ColumnOptions } from './column-options.model';
-import { ControlOptions } from './control-options.model';
-import { ControlType } from './control-type.model';
+import type { SelectItem } from 'primeng/api';
+import type { ColumnOptions } from './column-options.model';
+import type { ControlOptions } from './control-options.model';
+import type { ControlType } from './control-type.model';
 
 export interface CrudItemOptions {
   /** Unique identifier */

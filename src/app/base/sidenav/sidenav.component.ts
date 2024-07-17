@@ -12,7 +12,7 @@ import { SIDENAV_ITEMS } from './SIDENAV_ITEMS';
 })
 export class SidenavComponent {
   @Input() public lang = 'en';
-  @Output() public hovered: EventEmitter<boolean> = new EventEmitter();
+  @Output() public hovered: EventEmitter<boolean> = new EventEmitter<boolean>();
 
   public sidenavItems: SidenavItem[] = SIDENAV_ITEMS.filter(
     (item) => !item.hidden,

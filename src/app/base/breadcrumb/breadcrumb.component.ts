@@ -1,6 +1,6 @@
-import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, Input, OnInit } from '@angular/core';
+import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { NavigationEnd, Router } from '@angular/router';
-
 import { MenuItem } from 'primeng/api';
 import { filter, map, startWith, tap } from 'rxjs';
 import { SidenavItem } from '../sidenav/sidenav.model';
@@ -22,6 +22,7 @@ export class BreadcrumbComponent implements OnInit {
   constructor(
     private readonly sidenavService: SidenavService,
     private readonly router: Router,
+    private readonly destroyRef: DestroyRef
   ) {}
 
   ngOnInit(): void {
@@ -31,6 +32,7 @@ export class BreadcrumbComponent implements OnInit {
         map((event: NavigationEnd) => event.url),
         startWith(this.router.url),
         tap(() => (this.items = [this.homeItem])),
+        takeUntilDestroyed(this.destroyRef),
       )
       .subscribe((url) => {
         this.buildBreadcrumb(url);

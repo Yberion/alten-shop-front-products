@@ -6,14 +6,14 @@ import { Message, MessageService } from 'primeng/api';
 export class SnackbarService {
   constructor(private readonly messageService: MessageService) {}
 
-  public displayError(message = 'An error occured') {
+  public displayError(message = 'An error occured'): void {
     this.show({
       severity: 'error',
       detail: message,
     });
   }
 
-  public displaySuccess() {
+  public displaySuccess(): void {
     this.show({
       key: 'topRight',
       severity: 'success',
@@ -21,7 +21,7 @@ export class SnackbarService {
     });
   }
 
-  public displayInfo(message: string) {
+  public displayInfo(message: string): void {
     this.show({
       detail: message,
     });

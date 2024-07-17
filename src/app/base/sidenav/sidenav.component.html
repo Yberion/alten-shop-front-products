@@ -2,6 +2,7 @@
   class="sidenav"
   [class.expanded]="sidenavService.getExpanded()"
   (mouseover)="sidenavService.setExpanded(true)"
+  (focus)="sidenavService.setExpanded(true)"
   (mouseleave)="sidenavService.setExpanded(false)"
 >
   <i
@@ -9,11 +10,12 @@
     *ngIf="!sidenavService.getMobileDisplay()"
     [class.active]="sidenavService.getPinned()"
     (click)="sidenavService.togglePinned()"
+    (keydown.enter)="sidenavService.togglePinned()"
     data-expanded-only
   >
   </i>
   <div class="title-container" [routerLink]="'/'">
-    <img src="favicon.ico" height="25" />
+    <img src="favicon.ico" height="25" alt="" />
     <div class="title" data-expanded-only>
       <span class="first">Alten Shop</span>
     </div>
@@ -26,6 +28,7 @@
       <div
         class="li-container"
         (click)="onSidenavItemClick(item, $event)"
+        (keydown.enter)="onSidenavItemClick(item, $event)"
         [routerLink]="item.link"
         [routerLinkActiveOptions]="
           item.link === '/' ? { exact: true } : { exact: false }

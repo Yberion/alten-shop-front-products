@@ -9,8 +9,8 @@ export class SidenavService {
   private _pinned = true;
   private _isMobileDisplay = false;
 
-  public currentEntityName$: BehaviorSubject<string> = new BehaviorSubject('');
-  public currentChildEntityName$: BehaviorSubject<string> = new BehaviorSubject(
+  public currentEntityName$: BehaviorSubject<string> = new BehaviorSubject<string>('');
+  public currentChildEntityName$: BehaviorSubject<string> = new BehaviorSubject<string>(
     '',
   );
 

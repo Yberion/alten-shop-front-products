@@ -5,7 +5,7 @@ import { Inject, Injectable } from '@angular/core';
 export class ThemeService {
   constructor(@Inject(DOCUMENT) private document: Document) {}
 
-  public switchTheme(theme: 'dark' | 'light') {
+  public switchTheme(theme: 'dark' | 'light'): void {
     const themeLink = this.document.getElementById(
       'app-theme',
     ) as HTMLLinkElement;

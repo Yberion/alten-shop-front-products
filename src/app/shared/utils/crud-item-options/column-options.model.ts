@@ -1,4 +1,4 @@
-import { ScreenWidth } from './screen-width.model';
+import type { ScreenWidth } from './screen-width.model';
 
 export class ColumnOptions {
   /** Defines if the column is sortable or not */

@@ -29,7 +29,7 @@ export class ErrorInterceptor implements HttpInterceptor {
     );
   }
 
-  private returnError(status: number) {
+  private returnError(status: number): Observable<HttpResponse<unknown>> {
     return of(new HttpResponse({ status, body: null }));
   }
 }

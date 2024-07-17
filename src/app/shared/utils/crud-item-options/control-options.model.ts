@@ -1,6 +1,6 @@
-import { AbstractControl, ValidationErrors } from '@angular/forms';
-import { SelectItem } from 'primeng/api';
-import { Observable } from 'rxjs';
+import type { AbstractControl, ValidationErrors } from '@angular/forms';
+import type { SelectItem } from 'primeng/api';
+import type { Observable } from 'rxjs';
 
 export type ControlValidator = (
   control: AbstractControl<any, any>,
