@@ -1,8 +1,12 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { MenuItem } from 'primeng/api';
+import { ButtonModule } from 'primeng/button';
+import { ThemeToggleButtonComponent } from '../theme-toggle-button/theme-toggle-button.component';
 
 @Component({
   selector: 'app-navbar',
+  standalone: true,
+  imports: [ButtonModule, ThemeToggleButtonComponent],
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

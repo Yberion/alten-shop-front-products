@@ -9,14 +9,7 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { ThemeToggleButtonComponent } from './components/theme-toggle-button/theme-toggle-button.component';
 
 @NgModule({
-  declarations: [
-    NavbarComponent,
-    FooterComponent,
-    SidenavComponent,
-    ThemeToggleButtonComponent,
-    BreadcrumbComponent,
-  ],
-  imports: [CommonModule, SharedModule, ReactiveFormsModule],
+  imports: [CommonModule, SharedModule, ReactiveFormsModule, BreadcrumbComponent, FooterComponent, NavbarComponent, SidenavComponent, ThemeToggleButtonComponent],
   exports: [
     NavbarComponent,
     FooterComponent,
