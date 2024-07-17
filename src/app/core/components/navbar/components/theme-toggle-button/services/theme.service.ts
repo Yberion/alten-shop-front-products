@@ -1,9 +1,9 @@
 import { DOCUMENT } from '@angular/common';
-import { Inject, Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 
 @Injectable()
 export class ThemeService {
-  constructor(@Inject(DOCUMENT) private document: Document) {}
+  private readonly document: Document = inject(DOCUMENT);
 
   public switchTheme(theme: 'dark' | 'light'): void {
     const themeLink = this.document.getElementById(

@@ -1,6 +1,7 @@
 import {
   ChangeDetectionStrategy,
   Component,
+  inject,
   input,
   InputSignal,
   output,
@@ -29,10 +30,8 @@ export class SidenavComponent {
 
   public Object = Object;
 
-  constructor(
-    public readonly sidenavService: SidenavService,
-    private readonly router: Router,
-  ) {}
+  public readonly sidenavService: SidenavService = inject(SidenavService);
+  private readonly router: Router = inject(Router);
 
   public onMouseover(hovering: boolean): void {
     this.sidenavService.setExpanded(hovering);

@@ -1,10 +1,10 @@
 import { TitleCasePipe } from '@angular/common';
-import { Injectable } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { Message, MessageService } from 'primeng/api';
 
 @Injectable({ providedIn: 'root' })
 export class SnackbarService {
-  constructor(private readonly messageService: MessageService) {}
+  private readonly messageService: MessageService = inject(MessageService);
 
   public displayError(message = 'An error occured'): void {
     this.show({

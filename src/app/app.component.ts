@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, HostBinding } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostBinding, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { MessageModule } from 'primeng/message';
 import { ToastModule } from 'primeng/toast';
@@ -18,7 +18,7 @@ import { SidenavService } from './core/services/sidenav/sidenav.service';
 export class AppComponent {
   @HostBinding('class.transparent') transparent = false;
 
-  constructor(private readonly sidenavService: SidenavService) {}
+  private readonly sidenavService: SidenavService = inject(SidenavService);
 
   get getExpanded(): boolean {
     return this.sidenavService.getExpanded();

@@ -2,6 +2,7 @@ import {
   ChangeDetectionStrategy,
   Component,
   DestroyRef,
+  inject,
   input,
   InputSignal,
   OnInit
@@ -29,11 +30,9 @@ export class BreadcrumbComponent implements OnInit {
   private readonly sidenavItems: SidenavItem[] = SIDENAV_ITEMS;
   private homeItem: MenuItem = { label: 'Home', routerLink: '/' };
 
-  constructor(
-    private readonly sidenavService: SidenavService,
-    private readonly router: Router,
-    private readonly destroyRef: DestroyRef,
-  ) {}
+  private readonly sidenavService: SidenavService = inject(SidenavService);
+  private readonly router: Router = inject(Router);
+  private readonly destroyRef: DestroyRef = inject(DestroyRef);
 
   ngOnInit(): void {
     this.router.events
