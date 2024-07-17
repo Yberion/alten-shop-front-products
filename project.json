@@ -83,6 +83,9 @@
         "buildTarget": "product-trial:build"
       }
     },
+    "test": {
+      "executor": "@analogjs/vitest-angular:test"
+    },
     "lint": {
       "executor": "@nx/eslint:lint",
       "options": {
