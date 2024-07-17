@@ -1,10 +1,10 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  EventEmitter,
   input,
   InputSignal,
-  Output
+  output,
+  OutputEmitterRef
 } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { SidenavService } from '../../services/sidenav/sidenav.service';
@@ -21,7 +21,7 @@ import { SidenavItem } from './models/sidenav-item.model';
 })
 export class SidenavComponent {
   lang: InputSignal<string> = input<string>('en');
-  @Output() public hovered: EventEmitter<boolean> = new EventEmitter<boolean>();
+  hovered: OutputEmitterRef<boolean> = output<boolean>();
 
   public sidenavItems: SidenavItem[] = SIDENAV_ITEMS.filter(
     (item) => !item.hidden,
