@@ -6,5 +6,5 @@ export enum ControlType {
   LIST = 'list',
   MULTISELECT = 'multiselect',
   SELECT = 'select',
-  TABLE = 'table'
+  TABLE = 'table',
 }

@@ -1,4 +1,4 @@
-import { ScreenWidth } from "app/shared/utils/crud-item-options/screen-width.model";
+import { ScreenWidth } from './screen-width.model';
 
 export class ColumnOptions {
   /** Defines if the column is sortable or not */

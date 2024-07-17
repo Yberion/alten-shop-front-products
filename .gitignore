@@ -28,7 +28,6 @@ node_modules
 /.sass-cache
 /connect.lock
 /coverage
-**/coverage
 /libpeerconnection.log
 npm-debug.log
 yarn-error.log
@@ -39,9 +38,7 @@ testem.log
 .DS_Store
 Thumbs.db
 
-.angular
-
 .nx/cache
 .nx/workspace-data
 
-stats.html
+.angular

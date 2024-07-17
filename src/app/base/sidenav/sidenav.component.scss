@@ -33,7 +33,7 @@
     background-color: var(--primary-nav-color);
     height: 60px;
     line-height: 60px;
-    position: relative;    
+    position: relative;
     white-space: nowrap;
     overflow: hidden;
     display: flex;
@@ -90,21 +90,19 @@
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        
+
         .menu-icon {
           font-size: 1.2rem;
         }
-  
+
         .chevron {
           position: absolute;
           right: 20px;
         }
       }
-
     }
   }
 
-  
   &.expanded {
     width: 260px;
 
@@ -129,5 +127,4 @@
       }
     }
   }
-  
 }

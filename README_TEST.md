@@ -1,12 +1,13 @@
 # Front-end
 
-Créer un module angular "product" avec 2 composants (basés sur primeng): 
- - **products-admin** : qui liste les produits et qui permet de les administrer (ajouter, supprimer, modifier).
-    Il doit être accessible à cette adresse : http://localhost:4200/admin/products
- - **products** : qui liste les produits en mode lecture seule, comme sur une boutique en ligne.
-    Il doit être accessible à cette adresse : http://localhost:4200/products
+Créer un module angular "product" avec 2 composants (basés sur primeng):
 
-Une liste de produit est disponible dans le dossier assets : `assets/products.json`.
+- **products-admin** : qui liste les produits et qui permet de les administrer (ajouter, supprimer, modifier).
+  Il doit être accessible à cette adresse : http://localhost:4200/admin/products
+- **products** : qui liste les produits en mode lecture seule, comme sur une boutique en ligne.
+  Il doit être accessible à cette adresse : http://localhost:4200/products
+
+Une liste de produit est disponible dans le dossier assets : `public/products.json`.
 
 Le service qui permettra de manipuler les produits doit se baser sur cette liste et être prêt à être connecté sur une API Rest ultérieurement
 
@@ -17,11 +18,10 @@ Le design cible est visible sur les captures d'écrans ci-dessous (et disponible
 
 Nous vous conseillons d'utiliser le composant table de [PrimeNG](https://primeng.org/table#filter) avec les options filtre, edit, page, etc...
 
- **Pour la partie publique :**
+**Pour la partie publique :**
 ![public](doc/products.png)
 
 Nous vous conseillons d'utiliser le composant data view de [PrimeNG](https://primeng.org/dataview) avec les options sort, search, page, etc...
-
 
 Le menu latéral gauche doit contenir les accès à ces 2 composants.
 
@@ -39,17 +39,16 @@ Vous pouvez utiliser la technologie de votre choix parmis la liste suivante :
 - C#/.net Core
 - Python/Flask
 
+Le back-end doit gérer les API suivantes :
 
-Le back-end doit gérer les API suivantes : 
+| Resource        | POST                  | GET                            | PATCH                                    | PUT | DELETE           |
+| --------------- | --------------------- | ------------------------------ | ---------------------------------------- | --- | ---------------- |
+| **/products**   | Create a new products | Retrieve all products          | X                                        | X   | X                |
+| **/products/1** | X                     | Retrieve details for product 1 | Update details of product 1 if it exists | X   | Remove product 1 |
 
-| Resource           | POST                  | GET                            | PATCH                                    | PUT | DELETE           |
-| ------------------ | --------------------- | ------------------------------ | ---------------------------------------- | --- | ---------------- |
-| **/products**      | Create a new products | Retrieve all products          | X                                        | X   |     X            |
-| **/products/1**    | X                     | Retrieve details for product 1 | Update details of product 1 if it exists | X   | Remove product 1 |
+Un produit a les caractéristiques suivantes :
 
-Un produit a les caractéristiques suivantes : 
-
-``` typescript
+```typescript
 class Product {
   id: number;
   code: string;
