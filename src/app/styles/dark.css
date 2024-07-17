@@ -4833,29 +4833,29 @@ p-togglebutton.ng-dirty.ng-invalid > .p-togglebutton.p-button {
   border-radius: 4px;
   padding: 0.75rem;
 }
-.p-breadcrumb ul li .p-menuitem-link {
+.p-breadcrumb ol li .p-menuitem-link {
   transition: none;
   border-radius: 4px;
 }
-.p-breadcrumb ul li .p-menuitem-link:focus {
+.p-breadcrumb ol li .p-menuitem-link:focus {
   outline: 0 none;
   outline-offset: 0;
   box-shadow: none;
 }
-.p-breadcrumb ul li .p-menuitem-link .p-menuitem-text {
+.p-breadcrumb ol li .p-menuitem-link .p-menuitem-text {
   color: var(--primary-font-color);
 }
-.p-breadcrumb ul li .p-menuitem-link .p-menuitem-icon {
+.p-breadcrumb ol li .p-menuitem-link .p-menuitem-icon {
   color: rgba(255, 255, 255, 0.6);
 }
-.p-breadcrumb ul li.p-breadcrumb-chevron {
+.p-breadcrumb ol li.p-breadcrumb-chevron {
   margin: 0 0.5rem 0 0.5rem;
   color: rgba(255, 255, 255, 0.6);
 }
-.p-breadcrumb ul li:last-child .p-menuitem-text {
+.p-breadcrumb ol li:last-child .p-menuitem-text {
   color: var(--primary-font-color);
 }
-.p-breadcrumb ul li:last-child .p-menuitem-icon {
+.p-breadcrumb ol li:last-child .p-menuitem-icon {
   color: rgba(255, 255, 255, 0.6);
 }
 
