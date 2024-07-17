@@ -3,22 +3,22 @@
 @import 'primeng/resources/primeng.min.css';
 
 /* Custom SCSS */
-@import './app/styles/dropdown-panel.scss';
-@import './app/styles/error-card';
-@import './app/styles/dialog';
-@import './app/styles/portrait';
-@import './app/styles/table';
-@import './app/styles/input-text';
+@import 'styles/dropdown-panel.scss';
+@import 'styles/error-card';
+@import 'styles/dialog';
+@import 'styles/portrait';
+@import 'styles/table';
+@import 'styles/input-text';
 
 /* Fonts */
 @font-face {
   font-family: Lato;
-  src: url(app/fonts/Lato.ttf) format('truetype');
+  src: url(fonts/Lato.ttf) format('truetype');
 }
 
 @font-face {
   font-family: Quicksand;
-  src: url(app/fonts/Quicksand/Quicksand-Regular.ttf) format('truetype');
+  src: url(fonts/Quicksand/Quicksand-Regular.ttf) format('truetype');
 }
 
 $fontFamilyLato:

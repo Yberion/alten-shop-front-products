@@ -25,12 +25,12 @@
         "styles": [
           "./src/styles.scss",
           {
-            "input": "src/app/styles/dark.css",
+            "input": "src/styles/dark.css",
             "bundleName": "mdc-dark-deeppurple",
             "inject": false
           },
           {
-            "input": "src/app/styles/light.css",
+            "input": "src/styles/light.css",
             "bundleName": "mdc-light-deeppurple",
             "inject": false
           }
