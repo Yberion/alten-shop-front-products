@@ -4573,7 +4573,7 @@ p-togglebutton.ng-dirty.ng-invalid > .p-togglebutton.p-button {
 .p-breadcrumb ol li .p-menuitem-link .p-menuitem-icon {
   color: rgba(0, 0, 0, 0.6);
 }
-.p-breadcrumb ol li.p-breadcrumb-chevron {
+.p-breadcrumb ol li.p-menuitem-separator {
   margin: 0 0.5rem 0 0.5rem;
   color: rgba(0, 0, 0, 0.6);
 }

@@ -1,6 +1,6 @@
 export interface SidenavItem {
   id: string;
-  labels: Record<string, string>;
+  label: string;
   link: string;
   icon?: string;
   children?: SidenavItem[];

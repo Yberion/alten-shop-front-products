@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, DestroyRef, inject, input, InputSignal, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, DestroyRef, inject, OnInit, signal, WritableSignal } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { Event, EventType, NavigationEnd, Router } from '@angular/router';
 import { TranslocoModule } from '@jsverse/transloco';
@@ -18,8 +18,7 @@ import { SidenavItem } from '../sidenav/models/sidenav-item.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class BreadcrumbComponent implements OnInit {
-  lang: InputSignal<string> = input<string>('en');
-  public items: MenuItem[] = [];
+  public items: WritableSignal<MenuItem[]> = signal<MenuItem[]>([]);
   private readonly sidenavItems: SidenavItem[] = SIDENAV_ITEMS;
   private homeItem: MenuItem = { label: 'core.breadcrumb.pages.home', routerLink: '/' };
 
@@ -33,7 +32,7 @@ export class BreadcrumbComponent implements OnInit {
         filter((event: Event): event is NavigationEnd => event.type === EventType.NavigationEnd),
         map((event: NavigationEnd) => event.url),
         startWith(this.router.url),
-        tap(() => (this.items = [this.homeItem])),
+        tap(() => this.items.set([this.homeItem])),
         takeUntilDestroyed(this.destroyRef),
       )
       .subscribe((url) => {
@@ -43,12 +42,19 @@ export class BreadcrumbComponent implements OnInit {
 
   private buildBreadcrumb(path: string): void {
     const firstPath: SidenavItem | undefined = this.sidenavItems.find((item) => '/' + item.id === path);
-    if (firstPath) {
-      this.items.push({
-        label: firstPath.labels[this.lang()],
-        routerLink: firstPath.link,
-        command: () => this.sidenavService.setCurrentEntityName(''),
-      });
+    if (!firstPath) {
+      return;
     }
+
+    this.items.update((currentItems: MenuItem[]) => {
+      return [
+        ...currentItems,
+        {
+          label: firstPath.label,
+          routerLink: firstPath.link,
+          command: (): void => this.sidenavService.setCurrentEntityName(''),
+        },
+      ];
+    });
   }
 }

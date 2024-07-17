@@ -86,7 +86,8 @@
         }
 
         .li-container {
-          text-align: center;
+          display: flex;
+          align-items: center;
           min-height: 30px;
           white-space: nowrap;
           overflow: hidden;

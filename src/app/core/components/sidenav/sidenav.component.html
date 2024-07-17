@@ -36,8 +36,9 @@
           #rla="routerLinkActive"
         >
           <i class="pi pi-{{ item.icon }} menu-icon"></i>
+
           <span class="menu-title" data-expanded-only>{{
-            item.labels[lang()]
+            item.label | transloco
           }}</span>
         </div>
       </li>

@@ -1,5 +1,5 @@
 import { NgOptimizedImage } from '@angular/common';
-import { ChangeDetectionStrategy, Component, inject, input, InputSignal, output, OutputEmitterRef } from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, output, OutputEmitterRef } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
 import { TranslocoModule } from '@jsverse/transloco';
 import { SidenavService } from '../../services/sidenav/sidenav.service';
@@ -15,7 +15,6 @@ import { SidenavItem } from './models/sidenav-item.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SidenavComponent {
-  lang: InputSignal<string> = input<string>('en');
   hovered: OutputEmitterRef<boolean> = output<boolean>();
 
   public sidenavItems: SidenavItem[] = SIDENAV_ITEMS.filter((item) => !item.hidden);
