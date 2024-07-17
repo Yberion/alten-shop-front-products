@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { ThemeService } from './theme.service';
 
 @Component({
@@ -6,6 +6,7 @@ import { ThemeService } from './theme.service';
   templateUrl: './theme-toggle-button.component.html',
   styleUrls: ['./theme-toggle-button.component.scss'],
   providers: [ThemeService],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ThemeToggleButtonComponent implements OnInit {
   public darkMode = false;

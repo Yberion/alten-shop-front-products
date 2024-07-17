@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 
 import { MenuItem } from 'primeng/api';
@@ -11,6 +11,7 @@ import { SIDENAV_ITEMS } from '../sidenav/SIDENAV_ITEMS';
   selector: 'app-breadcrumb',
   templateUrl: './breadcrumb.component.html',
   styleUrls: ['./breadcrumb.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BreadcrumbComponent implements OnInit {
   @Input() public lang = 'en';

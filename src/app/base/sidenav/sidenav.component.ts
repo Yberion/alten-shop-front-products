@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 import { Router } from '@angular/router';
 import { SidenavItem } from './sidenav.model';
 import { SidenavService } from './sidenav.service';
@@ -8,6 +8,7 @@ import { SIDENAV_ITEMS } from './SIDENAV_ITEMS';
   selector: 'app-sidenav',
   templateUrl: './sidenav.component.html',
   styleUrls: ['./sidenav.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class SidenavComponent {
   @Input() public lang = 'en';
