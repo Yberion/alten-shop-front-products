@@ -13,12 +13,12 @@
 /* Fonts */
 @font-face {
   font-family: Lato;
-  src: url(../public/fonts/Lato.ttf) format('truetype');
+  src: url(app/fonts/Lato.ttf) format('truetype');
 }
 
 @font-face {
   font-family: Quicksand;
-  src: url(../public/fonts/Quicksand/Quicksand-Regular.ttf) format('truetype');
+  src: url(app/fonts/Quicksand/Quicksand-Regular.ttf) format('truetype');
 }
 
 $fontFamilyLato:
