@@ -5,7 +5,7 @@ import { ToastModule } from 'primeng/toast';
 import { BreadcrumbComponent } from './core/components/breadcrumb/breadcrumb.component';
 import { NavbarComponent } from './core/components/navbar/navbar.component';
 import { SidenavComponent } from './core/components/sidenav/sidenav.component';
-import { SidenavService } from './core/services/sidenav.service';
+import { SidenavService } from './core/services/sidenav/sidenav.service';
 
 @Component({
   selector: 'app-root',

@@ -10,7 +10,7 @@ import { NavigationEnd, Router } from '@angular/router';
 import { MenuItem } from 'primeng/api';
 import { BreadcrumbModule } from 'primeng/breadcrumb';
 import { filter, map, startWith, tap } from 'rxjs';
-import { SidenavService } from '../../services/sidenav.service';
+import { SidenavService } from '../../services/sidenav/sidenav.service';
 import { SIDENAV_ITEMS } from '../sidenav/data/sidenav-items.data';
 import { SidenavItem } from '../sidenav/models/sidenav-item.model';
 

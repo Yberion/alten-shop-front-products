@@ -6,7 +6,7 @@ import {
   Output,
 } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive } from '@angular/router';
-import { SidenavService } from '../../services/sidenav.service';
+import { SidenavService } from '../../services/sidenav/sidenav.service';
 import { SIDENAV_ITEMS } from './data/sidenav-items.data';
 import { SidenavItem } from './models/sidenav-item.model';
 
