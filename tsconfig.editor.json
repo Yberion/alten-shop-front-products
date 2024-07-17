@@ -1,6 +1,6 @@
 {
   "extends": "./tsconfig.json",
-  "include": ["src/**/*.ts"],
+  "include": ["src/**/*.ts", "commitlint.config.ts"],
   "compilerOptions": {},
   "exclude": ["src/**/*.spec.ts", "src/test-setup.ts", "vite.config.mts", "src/**/*.test.ts"]
 }
