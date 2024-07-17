@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { MenuItem } from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
-import { ThemeToggleButtonComponent } from '../theme-toggle-button/theme-toggle-button.component';
+import { ThemeToggleButtonComponent } from './components/theme-toggle-button/theme-toggle-button.component';
 
 @Component({
   selector: 'app-navbar',
