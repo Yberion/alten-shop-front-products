@@ -38,7 +38,7 @@
   --surface-section: var(--primary-bg-color-light);
   --surface-card: var(--primary-bg-color-light);
   --surface-overlay: var(--primary-bg-color-light);
-  --surface-border: #rgba(0, 0, 0, 0.12);
+  --surface-border: rgba(0, 0, 0, 0.12);
   --surface-hover: rgba(0, 0, 0, 0.04);
   --maskbg: rgba(0, 0, 0, 0.32);
   --focus-ring: none;
@@ -797,7 +797,7 @@ p-chips.ng-dirty.ng-invalid > .p-chips > .p-inputtext {
 
 .p-dropdown {
   background: var(--primary-bg-color-light);
-  border: 1px solid rgba(0, 0, 0, 0.38);
+  border: 1px solid var(--surface-border);
   transition:
     background-color 0.2s,
     border-color 0.2s,
@@ -1163,7 +1163,7 @@ p-inputswitch.ng-dirty.ng-invalid > .p-inputswitch {
   color: var(--primary-font-color);
   background: var(--primary-bg-color-light);
   padding: 0.75rem 0.75rem;
-  border: 1px solid rgba(0, 0, 0, 0.38);
+  border: 1px solid var(--surface-border);
   transition:
     background-color 0.2s,
     border-color 0.2s,

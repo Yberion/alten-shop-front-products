@@ -41,6 +41,9 @@ importers:
       '@nx/angular':
         specifier: 19.5.0-beta.3
         version: 19.5.0-beta.3(@angular-devkit/build-angular@18.1.0(@angular/compiler-cli@18.1.0(@angular/compiler@18.1.0(@angular/core@18.1.0(rxjs@7.8.1)(zone.js@0.14.7)))(typescript@5.5.3))(@swc/core@1.6.13(@swc/helpers@0.5.12))(@types/node@20.14.11)(chokidar@3.6.0)(stylus@0.59.0)(typescript@5.5.3))(@angular-devkit/core@18.1.0(chokidar@3.6.0))(@angular-devkit/schematics@18.1.0(chokidar@3.6.0))(@babel/traverse@7.24.8)(@schematics/angular@18.1.0(chokidar@3.6.0))(@swc-node/register@1.10.9(@swc/core@1.6.13(@swc/helpers@0.5.12))(@swc/types@0.1.9)(typescript@5.5.3))(@swc/core@1.6.13(@swc/helpers@0.5.12))(@types/node@20.14.11)(@zkochan/js-yaml@0.0.7)(esbuild@0.23.0)(eslint@8.57.0)(nx@19.5.0-beta.3(@swc-node/register@1.10.9(@swc/core@1.6.13(@swc/helpers@0.5.12))(@swc/types@0.1.9)(typescript@5.5.3))(@swc/core@1.6.13(@swc/helpers@0.5.12)))(rxjs@7.8.1)(typescript@5.5.3)(webpack@5.93.0(@swc/core@1.6.13(@swc/helpers@0.5.12))(esbuild@0.23.0))
+      primeflex:
+        specifier: 3.3.1
+        version: 3.3.1
       primeicons:
         specifier: 7.0.0
         version: 7.0.0
@@ -5499,6 +5502,9 @@ packages:
   pretty-format@29.7.0:
     resolution: {integrity: sha512-Pdlw/oPxN+aXdmM9R00JVC9WVFoCLTKJvDVLgmJ+qAffBMxsV85l/Lu7sNx4zSzPyoL2euImuEwHhOXdEgNFZQ==}
     engines: {node: ^14.15.0 || ^16.10.0 || >=18.0.0}
+
+  primeflex@3.3.1:
+    resolution: {integrity: sha512-zaOq3YvcOYytbAmKv3zYc+0VNS9Wg5d37dfxZnveKBFPr7vEIwfV5ydrpiouTft8MVW6qNjfkaQphHSnvgQbpQ==}
 
   primeicons@7.0.0:
     resolution: {integrity: sha512-jK3Et9UzwzTsd6tzl2RmwrVY/b8raJ3QZLzoDACj+oTJ0oX7L9Hy+XnVwgo4QVKlKpnP/Ur13SXV/pVh4LzaDw==}
@@ -13734,6 +13740,8 @@ snapshots:
       '@jest/schemas': 29.6.3
       ansi-styles: 5.2.0
       react-is: 18.3.1
+
+  primeflex@3.3.1: {}
 
   primeicons@7.0.0: {}
 

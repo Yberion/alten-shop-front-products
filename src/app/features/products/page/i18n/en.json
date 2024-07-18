@@ -1,0 +1,10 @@
+{
+  "paginatorReport": "Showing {first} to {last} of {totalRecords}",
+  "sort": {
+    "sortByPlaceholder": "Sort By"
+  },
+  "search": {
+    "placeholder": "Search"
+  },
+  "buyButton": "Buy Now"
+}

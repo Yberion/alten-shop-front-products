@@ -89,6 +89,7 @@
           display: flex;
           align-items: center;
           min-height: 30px;
+          justify-content: center;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
@@ -121,6 +122,7 @@
 
         .li-container {
           text-align: unset;
+          justify-content: unset;
 
           .menu-icon {
             margin-right: 12px;

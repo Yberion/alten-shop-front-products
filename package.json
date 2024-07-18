@@ -33,6 +33,7 @@
     "@angular/router": "18.1.0",
     "@jsverse/transloco": "7.4.2",
     "@nx/angular": "19.5.0-beta.3",
+    "primeflex": "3.3.1",
     "primeicons": "7.0.0",
     "primeng": "17.18.4",
     "rxjs": "7.8.1",
