@@ -1,6 +1,6 @@
 import { HttpClient, HttpParams } from '@angular/common/http';
-import { Injectable, inject } from '@angular/core';
-import { Observable } from 'rxjs';
+import { inject, Injectable } from '@angular/core';
+import { delay, Observable } from 'rxjs';
 import { Product } from '../models/product.model';
 import { Products } from '../models/products.model';
 
@@ -9,7 +9,8 @@ export class ProductApiService {
   private readonly httpClient: HttpClient = inject(HttpClient);
 
   getProducts(): Observable<Products> {
-    return this.httpClient.get<Products>('/products.json');
+    // `delay` to simulate long request
+    return this.httpClient.get<Products>('/products.json').pipe(delay(500));
   }
 
   getProduct(id: number): Observable<Product> {
@@ -28,6 +29,13 @@ export class ProductApiService {
 
   deleteProduct(id: number): Observable<void> {
     const httpParams: HttpParams = new HttpParams().set('id', id);
+
+    return this.httpClient.delete<void>('', { params: httpParams });
+  }
+
+  deleteProducts(id: number[]): Observable<void> {
+    // Just for the test
+    const httpParams: HttpParams = new HttpParams().set('ids', id.join(','));
 
     return this.httpClient.delete<void>('', { params: httpParams });
   }

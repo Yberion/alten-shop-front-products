@@ -8,7 +8,7 @@ export const SIDENAV_ITEMS: SidenavItem[] = [
     icon: 'shopping-cart',
   },
   {
-    id: 'admin',
+    id: 'admin/products',
     label: 'core.sidenav.items.admin',
     link: 'admin/products',
     icon: 'users',

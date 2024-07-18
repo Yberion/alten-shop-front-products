@@ -12,6 +12,10 @@ export const appRoutes: Route[] = [
     loadChildren: () => import('./features/products/products.routes').then((c) => c.productsRoutes),
   },
   {
+    path: 'admin',
+    loadChildren: () => import('./features/admin/products.routes').then((c) => c.adminProductsRoutes),
+  },
+  {
     path: '**',
     redirectTo: '',
   },

@@ -23,4 +23,8 @@ export class ProductApiMockService extends ProductApiService {
   override deleteProduct(_id: number): Observable<void> {
     return of(void 0).pipe(delay(500));
   }
+
+  override deleteProducts(_id: number[]): Observable<void> {
+    return of(void 0).pipe(delay(500));
+  }
 }

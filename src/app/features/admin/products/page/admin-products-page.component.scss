@@ -1,0 +1,16 @@
+:host {
+  ::ng-deep .p-dialog .product-image {
+    width: 150px;
+    margin: 0 auto 2rem auto;
+    display: block;
+  }
+
+  .card {
+    background: var(--primary-bg-color-light);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+    max-width: 1300px;
+    width: 100%;
+  }
+}
