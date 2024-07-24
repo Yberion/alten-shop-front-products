@@ -20,10 +20,9 @@ pnpm install --no-frozen-lockfile
 
 ## Migration / update
 
+- `pnpm exec nx migrate nx@latest`
 - Angular Material & CDK require `tsConfig` path in `project.json`
   - https://github.com/nrwl/nx/issues/9280
-- nx
-  - `pnpm exec nx migrate nx@latest`
 
 ## Commit Convention
 
