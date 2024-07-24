@@ -33,10 +33,6 @@ export class SidenavService {
     return this._isMobileDisplay;
   }
 
-  public toggleExpanded(): void {
-    this._expanded = !this._expanded;
-  }
-
   public setExpanded(expanded: boolean): void {
     this._expanded = expanded;
   }

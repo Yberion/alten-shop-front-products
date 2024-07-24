@@ -42,6 +42,7 @@ export class BreadcrumbComponent implements OnInit {
 
   private buildBreadcrumb(path: string): void {
     const firstPath: SidenavItem | undefined = this.sidenavItems.find((item) => '/' + item.id === path);
+
     if (!firstPath) {
       return;
     }
